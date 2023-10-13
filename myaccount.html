@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Rena Hashimi">
-    <meta name="description" content="Rainydays - Product page"/>
+    <meta name="description" content="Rainydays - My account"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/product.js"></script>
-    <script defer src="js/productDetails.js"></script>
-    <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>
-    <title>PRODUCT</title>
+    <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>    
+    <title>MY ACCOUNT</title>
 </head>
 <body>
   <header>
     <div>
       <input type="checkbox" id="menu-chechbox">
-      <label class="hide" for="menu-chechbox"><i class="fa fa-bars fa-2x" style="color: #0a3641;"></i>
+      <label class="hide" for="menu-chechbox"><i class="fa fa-bars fa-2x" style="color: #0a3641;"></i>        
       </label> 
       <nav class="nav1">
         <div class="nav2">
@@ -26,7 +24,7 @@
           <a href="contact.html">Contact</a>
           <a href="about.html">About us</a>
         </div>
-      </nav>    
+      </nav>     
     </div>
     <div>
       <a href="index.html"><img class="headlogo" src="images/Logo/Logo.jpg" alt="Logo"></a>
@@ -39,48 +37,33 @@
     </div>
   </header>
   <main>
-    <div class="line6"></div>
-
-      <div class="productcontainer">
-        <h1 class="producttitle">'FLORA'</h1>
-        <img class="productimg" src="/images/Jacket/flora.jpg">
-      </div> 
-
-
-
-      <div class="linex"></div>
-
-
-
-
-      <div class="props">
-        <h2 id="productname"></h2>
-        <p id="productprops"></p>
-        <p></p>    
-        <p id="price"></p>    
-        
-
-      </div>
-
-
-
-
-      <div class="linex"></div> 
-
-      <div class="pro-b">
-        <form class="size">
-          <div><input type="checkbox" class="sizes" id="chechbox-s" value="1"/>
-          <label class="size-x" for="chechbox-s">S</label></div>
-          <div><input type="checkbox" class="sizes" id="chechbox-m" value="1"/>
-          <label class="size-x" for="chechbox-m">M</label></div>
-          <div><input type="checkbox" class="sizes" id="chechbox-l" value="1"/>
-          <label class="size-x"  for="chechbox-l">L</label></div>
-        </form> 
-        
-        
-      </div>  
-      <div><a href="cart.html"><button id="atc">ADD TO CART</button></a></div>
-
+    <div class="line1"></div> 
+    <h1>MY ACCOUNT</h1>
+    <div class="ma-container"> 
+      <form class="ma-form">    
+        <h2 class="mah1">SIGN IN</h2>  
+        <label for="email" class="ma-l"> Email</label> 
+        <input type="email" id="email" class=email-ma autocomplete="on" required>        
+        <label for="new-password" class="ma-l">Password</label> 
+        <input type="password" id="new-password" class="password-ma" required>
+        <ul>
+          <li class="ma-p1">Forgot password?</li>
+        </ul>
+        <button class="m-a-button" type="submit">LOGIN</button>
+        <div>
+          <p class="ma-p2">Don´t have an account?</p>
+          <button class="m-a-button" type="submit">SIGN UP</button>
+        </div>
+      </form>
+      <div class="line1"></div>
+      <form class="ma-form2">
+        <h3 class="ma-join">JOIN OUR NEWSLETTER 
+          FOR MORE RAINY´DAYS</h3>
+        <label for="Email" class="ma-l">Email</label> 
+        <input type="email" id="email" class=email-ma2  autocomplete="on" required> 
+        <button class="m-a-button" id="button" type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
   </main>
   <footer>
     <div class="footline"></div>
@@ -113,10 +96,10 @@
           <div class="foot-content"><i class="fa-brands fa-square-instagram" style="color: #0a3641;"></i></div>
           <div class="foot-content"><i class="fa-brands fa-square-facebook" style="color: #0a3641;"></i></div>
           <div class="foot-content"><i class="fa-brands fa-square-twitter" style="color: #0a3641;"></i></div>  
-        </div> 
-        <p class="foot-lname">@rainydays</p>
+          </div> 
+          <p class="foot-lname">@rainydays</p>
+        </div>
       </div>
-    </div>
- </footer>
-</body>
+    </footer> 
+  </body>
 </html>

@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Rena Hashimi">
-    <meta name="description" content="Rainydays - Product page"/>
+    <meta name="description" content="Rainydays - Help & Contact"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/product.js"></script>
-    <script defer src="js/productDetails.js"></script>
     <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>
-    <title>PRODUCT</title>
+    <title>CONTACT US</title>
 </head>
 <body>
   <header>
@@ -26,7 +24,7 @@
           <a href="contact.html">Contact</a>
           <a href="about.html">About us</a>
         </div>
-      </nav>    
+      </nav>      
     </div>
     <div>
       <a href="index.html"><img class="headlogo" src="images/Logo/Logo.jpg" alt="Logo"></a>
@@ -39,48 +37,51 @@
     </div>
   </header>
   <main>
-    <div class="line6"></div>
-
-      <div class="productcontainer">
-        <h1 class="producttitle">'FLORA'</h1>
-        <img class="productimg" src="/images/Jacket/flora.jpg">
-      </div> 
-
-
-
-      <div class="linex"></div>
-
-
-
-
-      <div class="props">
-        <h2 id="productname"></h2>
-        <p id="productprops"></p>
-        <p></p>    
-        <p id="price"></p>    
-        
-
+    <div class="line1"></div>
+    <h1 class="c-name">help & contact</h1>
+    <section class="container-contact">
+      <div>
+        <h2 class="c-name">shipping fee</h2>
+        <div class="shipping"><p>$ 4,99</p>
+          <p>2-5 business days</p>
+          <p class="p-bold">Free shipping over $ 300</p></div>
+        <div class="line-y"></div>
+        <h4 class="c-name">information</h4>
+        <div class="container4">
+          <div class="content2"><i class="fa-solid fa-location-dot fa-2x" style="color:#0a3641;"></i>
+            <p>Oslovei 1</p>
+            <p>1234 Oslo</p>
+          </div>
+          <div class="content2"><i class="fa-solid fa-phone fa-2x" style="color: #0a3641;"></i>
+            <p>+47 99887766</p></div>
+            <div class="content2"><i class="fa-solid fa-envelope fa-2x" style="color: #0a3641;"></i>
+            <p>contact@rainydays.com</p>
+          </div> 
+        </div>
       </div>
-
-
-
-
-      <div class="linex"></div> 
-
-      <div class="pro-b">
-        <form class="size">
-          <div><input type="checkbox" class="sizes" id="chechbox-s" value="1"/>
-          <label class="size-x" for="chechbox-s">S</label></div>
-          <div><input type="checkbox" class="sizes" id="chechbox-m" value="1"/>
-          <label class="size-x" for="chechbox-m">M</label></div>
-          <div><input type="checkbox" class="sizes" id="chechbox-l" value="1"/>
-          <label class="size-x"  for="chechbox-l">L</label></div>
-        </form> 
-        
-        
-      </div>  
-      <div><a href="cart.html"><button id="atc">ADD TO CART</button></a></div>
-
+      <div class="line-x"></div> 
+      <div><h4 class="c-name">contact us</h4>
+        <div class="container5">
+          <form class="c-form">      
+            <label for="text" class="cform-l">Full name</label>
+            <input type="text" id="name" class=name autocomplete="on" required> 
+            <label for="email" class="cform-l">Email</label>
+            <input type="email" id="email" class=email  autocomplete="on" required>        
+            <label for="number" class="cform-l">Phone</label>
+            <input type="number" id="phone" class=phone  autocomplete="on"  required>
+            <textarea id="message" class="message" rows="6" placeholder="Write your message her"></textarea>
+            <button class="m-button" type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="line-y"></div> 
+        <div class="medialogo">
+          <div class="content3"><i class="fa-brands fa-square-instagram" style="color: #0a3641;"></i></div>
+          <div class="content3"><i class="fa-brands fa-square-facebook" style="color: #0a3641;"></i></div>
+          <div class="content3"><i class="fa-brands fa-square-twitter" style="color: #0a3641;"></i></div>
+        </div> 
+        <p class="logoname">@rainydays</p>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="footline"></div>
@@ -117,6 +118,6 @@
         <p class="foot-lname">@rainydays</p>
       </div>
     </div>
- </footer>
+  </footer>
 </body>
 </html>
