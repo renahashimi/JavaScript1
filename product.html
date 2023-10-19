@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/product.js"></script>
-    <script defer src="js/productDetails.js"></script>
     <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>
     <title>PRODUCT</title>
 </head>
@@ -41,45 +40,40 @@
   <main>
     <div class="line6"></div>
 
-      <div class="productcontainer">
-        <h1 class="producttitle">'FLORA'</h1>
-        <img class="productimg" src="/images/Jacket/flora.jpg">
+      <div class="productContent">
+
+        <h1 class="productTitle"></h1>
+        <img class="productImage"> 
+        <p class="productPrice"></p>   
+
+        <div>
+          <p class="productSize"></p>
+          <p class="productDetail"></p>
+        </div>
+
       </div> 
-
-
 
       <div class="linex"></div>
 
+      <div id="sizeSelection">
+        <button id="sizeS">S</button>
+        <button id="sizeM">M</button>
+        <button id="sizeL">L</button>
 
 
 
-      <div class="props">
-        <h2 id="productname"></h2>
-        <p id="productprops"></p>
-        <p></p>    
-        <p id="price"></p>    
-        
-
-      </div>
-
-
-
-
-      <div class="linex"></div> 
-
-      <div class="pro-b">
         <form class="size">
-          <div><input type="checkbox" class="sizes" id="chechbox-s" value="1"/>
-          <label class="size-x" for="chechbox-s">S</label></div>
-          <div><input type="checkbox" class="sizes" id="chechbox-m" value="1"/>
-          <label class="size-x" for="chechbox-m">M</label></div>
-          <div><input type="checkbox" class="sizes" id="chechbox-l" value="1"/>
-          <label class="size-x"  for="chechbox-l">L</label></div>
+          <div><input type="checkbox"  class="sizes" id="checkbox-s" value="1"/>
+          <label class="size-x" id="size-s" for="checkbox-s" onclick="sizeSelection">S</label></div>
+          <div><input type="checkbox" class="sizes" id="checkbox-m" value="1"/>
+          <label class="size-x" id="size-m" for="checkbox-m" onclick="sizeSelection">M</label></div>
+          <div><input type="checkbox"   class="sizes" id="checkbox-l" value="1"/>
+          <label class="size-x" id="size-l" for="checkbox-l" onclick="sizeSelection">L</label></div>
         </form> 
         
         
       </div>  
-      <div><a href="cart.html"><button id="atc">ADD TO CART</button></a></div>
+      <button onclick="addCart" id="atc"></button>
 
   </main>
   <footer>

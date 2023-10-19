@@ -6,7 +6,7 @@ body {
     color: #0A3641;
 }
 
-ul, ol {
+ul, ol, a {
     list-style: none;
     text-decoration: none;
     list-style-type: none;
@@ -14,11 +14,6 @@ ul, ol {
     margin: 0;
 }
 
-nav li, nav ol, nav a {
-    list-style: none;
-    text-decoration: none;
-    list-style-type: none;
-}
 
 nav a:hover {
     text-decoration: none;
@@ -28,24 +23,22 @@ nav a:hover {
 h1 {
     display: block;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     list-style: none;
     text-decoration: none;
     text-align: center;
     justify-content: center;
-    margin: 20px 0;  
+    margin: 20px 0 30px;  
     padding: 3px; 
     width: 100%;
     color: #0A3641;
-    box-sizing: border-box;
-    border: #0A3641 solid 2px;
     text-align: center;
 }
 
 h2, h3, h4  {
     text-decoration: none;
     list-style: none;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 
 
@@ -53,12 +46,13 @@ h2, h3, h4  {
 
 header {
     display: grid;
-    grid-template-columns: 100px auto 100px;
-    margin: 5px;
+    grid-template-columns: 80px auto 80px;
 }  
 
 .headlogo {
     display: flex;
+    width: 50%;
+    min-width: 75px;
     max-width: 100px;
     height: auto;
     margin: 20px auto 0;
@@ -73,17 +67,16 @@ header {
     background-color: #fff;
     display: flex;
     width: 100%;
-    position: absolute;
+    min-width: 100px;
     padding: 0;  
-    border-bottom: 5px solid #0A3641;
-}
-
-.nav1 a:hover {
-    font-weight: bold;
 }
 
 .nav1 {
     margin: 10px 0 0 -15px;
+}
+
+.nav1 a:hover {
+    font-weight: bold;
 }
 
 .nav2 {
@@ -97,7 +90,7 @@ header {
     font-size: 1.3em;
     color: #0A3641; 
     margin: 10px;
-    width: 150px;
+    width: 250px;
     height: auto;
     background-color: #fff;
     padding: 2px;
@@ -130,7 +123,7 @@ label {
 
 .content-x {
     display: flex;
-    margin: auto; 
+    margin: 70px auto; 
     justify-content: center;
 }
 
@@ -148,34 +141,33 @@ label {
 
 .women, .men {
     display: flex;
-    border: 7px double #fff;
-    box-sizing: border-box;
-    color: #0A3641;
-    margin: 20px 0px;
+    margin: 30px auto;
     letter-spacing: 0.3em;
     align-items: center;
     justify-content: center;
-    font-weight: 500;
 }   
 
 .women a, .men a {
-    font-size: 2.5em;
-    padding: 5px;
-    margin: 20px;
+    font-size: 1.5em;
+    font-weight: bolder;   
     color: #0A3641;
-    background-color: #dbdbdb;
-    border-radius: 20px;
-    border: 3px solid#fff;
-    width: 210px;
+    padding: 20px;
+    margin: auto 20px;
+    color: #0A3641;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid #0A3641;
+    width: 200px;
     text-align: center;
 }
 
 .sf p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2em;
+    font-size: 1.4em;
+    margin-top: 40px;
     text-align: center;  
     font-style: italic;
-    font-weight: 200;
+    font-weight: bold;
     letter-spacing: 0.5em;
 }
 
@@ -185,7 +177,6 @@ label {
 }
 
 .na-x2 {
-
     width: 98%;
     position: relative;
     justify-content: center;
@@ -307,76 +298,40 @@ label {
 
 /*Women & Men*/
 
-.site-name {
+.productContainer, .productContainerMen {
+    letter-spacing: 0.7em;
+}
+
+.productSection {
+    display: -moz-inline-stack;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    text-align: center;
+}
+
+.productName {
     display: block;
-    margin: auto;    
-    padding: 3px; 
-    margin-top: 20px;
-    width: 100%;
-    color: #0A3641;
-    font-size: 60px;
-    text-align: center;
-    box-sizing: border-box;
-    border: #0A3641 solid 4px;
-    text-align: center;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 3px;
-}
-
-.container1 { 
-    display: grid; 
-    width: 95%;
-    grid-template-columns: 1fr 1fr;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 5px;
-    padding: 5px;
-    place-items: center;
-
-}
-
-.shop {
-    border: #0A3641 solid 1px;
-    width: 150px;
-    height: 280px;
-    margin-bottom: 20px;
-}
-
-.shop p {
-    font-size: 0.8em;
-    margin: 20px;
-}
-
-.shop span {
-    float: right;
-    font-weight: bolder;
     font-size: 1.1em;
-    margin-top: -2px;
-}
-
-.shop-image {
-    display: block;
-    width: 80%;
-    height: 150px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    font-weight: bolder;
     margin: auto;
-    padding: 10px;
-    margin-top: 10px;
+    padding-top: 10px;
+    justify-content: center;
+    border-top: 2px dashed #0A3641;
 }
 
-.bn {
-    border: 1.5px solid #0A3641;
-    box-sizing: border-box;
-    background-color: #fff;
-    width: 100px;
-    height: 30px;
-    list-style: none;
+.price {
+    font-weight: bolder;
+    font-size: 1em;
     text-align: center;
-    margin: auto;
-    padding: 4px;
-    text-decoration: none;
-    border-radius: 50px 0;
+    margin: auto auto 20px;
+}
+
+.productImage {
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    width: 200px;
+    min-height: 200px;
+    margin: 30px auto 20px;
 }
 
 .line5 {
@@ -386,53 +341,24 @@ label {
     margin-top: 30px;
 }
 
-.bn a {
-    font-size: 0.8em;
-    color: #0A3641;
-    text-decoration: none;
-    text-align: center;
+.bn {
+    font-size: 0.9em;
+    color: #0A3641; 
     font-weight: bolder;
+    border: 2px solid #0A3641;    
+    border-radius: 10px 0;  
+    background-color: #fff;
+    width: 100px;
+    max-width: 50%;
+    height: 30px;
+    text-align: center;
+    margin: 10px auto 70px;
 }
 
-.img1 {
-    background-image: url('/images/Jacket/oxygen.jpg');
-}
-.img2 {
-    background-image: url('/images/Jacket/lake.jpg');
-}
-.img3 {
-    background-image: url('/images/Jacket/ocean.jpg');
-}
-.img8 {
-    background-image: url('/images/Jacket/flora.jpg')
-}
-.img5 {
-    background-image: url('/images/Jacket/ozone.jpg');
-}
-.img6 {
-    background-image: url('/images/Jacket/river.jpg');
-}
-.img7 {
-    background-image: url('/images/Jacket/steam.jpg');
-
-}
 
 
 /*Product*/
 
-.productcontainer {
-    display: block;
-    width: 100%;
-    margin: auto;
-    justify-content: center;
-}
-
-.productimg {
-    display: block;
-    width: 80%;
-    height: auto;
-    margin: 30px auto 10px;
-}
 
 .linex {
     display: block;
@@ -448,20 +374,10 @@ label {
     margin-top: 10px;
 }
 
-
 .producttitle {
     border: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 20px;
-}
-
-.price {
-    display: block;
-    color: #0A3641;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2em;
-    letter-spacing: 0.5em;
 }
 
 .props {
@@ -480,39 +396,30 @@ label {
 #atc {
     display: block;
     border: 3px solid #0A3641;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    width: 250px;
-    height: auto;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 20px;
-    margin: 25px auto 30px;
-}
-
-#atc a {
-    list-style: none;
-    text-decoration: none;
-    list-style: none;
     color: #0A3641;
+    border-radius: 10px;
+    width: 160px;
+    height: auto;
+    font-size: 1em;
     font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    margin: 25px auto 30px; 
 }
 
 .size {
     display: flex;
-    width: 80%;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    margin: 30px auto;
+    font-size: 1.2em;
 }
 
 .size-x {
     border: 1px solid #0A3641;
     width: 30px;
     justify-content: center;   
-    scale: 1.2;
+    scale: 1;
+    margin: 12px;
 }
 
 .size-x:hover {
@@ -1068,8 +975,7 @@ footer {
 /*All html*/
 
 h1 {
-    text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
 } 
    
 /*Header*/    
@@ -1290,8 +1196,7 @@ header {
 /*All html*/
 
 h1 {
-    text-align: center;
-    font-size: 3em;
+    font-size: 1.9em;
 }
 
 
@@ -1616,8 +1521,7 @@ body {
 }
     
 h1 {
-    text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 
@@ -1911,7 +1815,7 @@ header {
     justify-content: center;
 }
 
-.pro-b {
+#sizeSelection {
     display: block;
     width: 25%;
 }
@@ -1924,7 +1828,6 @@ header {
 }
 
 .size::before {
-    position: absolute;
     content: "";
     height: 3px;
     width: 120px;
