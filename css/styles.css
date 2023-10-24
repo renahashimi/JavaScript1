@@ -65,6 +65,7 @@ header {
 
 #menu-chechbox:checked ~ nav {
     background-color: #fff;
+    text-transform: uppercase;
     display: flex;
     width: 100%;
     min-width: 100px;
@@ -299,11 +300,14 @@ label {
 /*Women & Men*/
 
 .productContainer, .productContainerMen {
-    letter-spacing: 0.7em;
+    display: block;
+    letter-spacing: 1.2em;
+    font-weight: bolder;
+    text-align: center;
+    margin: 20px auto;
 }
 
-.productSection {
-    display: -moz-inline-stack;
+.productSection, .productSectionMen {
     display: grid;
     grid-template-rows: auto 1fr auto auto;
     text-align: center;
@@ -359,6 +363,10 @@ label {
 
 /*Product*/
 
+.productContent {
+    display: flex;
+
+}
 
 .linex {
     display: block;
@@ -374,7 +382,7 @@ label {
     margin-top: 10px;
 }
 
-.producttitle {
+.productTitle {
     border: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 20px;
@@ -1061,34 +1069,64 @@ header {
   
 /*Women & Men*/
 
-.container1 {
+.productContainer, .productContainerMen {
+    display: block;
+    letter-spacing: 1.2em;
+    font-weight: bolder;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.productSection, .productSectionMen {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 95%;
+    grid-template-rows: auto 1fr auto auto;
+    text-align: center;
 }
 
-.shop {
-    width: 180px;
+.productName {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bolder;
+    margin: auto;
+    padding-top: 10px;
+    justify-content: center;
+    border-top: 2px dashed #0A3641;
 }
 
-.shop p {
-    font-size: 18px;
-    margin: 25px 20px 5px;
+.price {
+    font-weight: bolder;
+    font-size: 1em;
+    text-align: center;
+    margin: auto auto 20px;
 }
-    
-.shop span {
-    float: right;
-    font-size: 18px;
+
+.productImage {
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    width: 200px;
+    min-height: 200px;
+    margin: 30px auto 20px;
+}
+
+.line5 {
+    display: block;
+    border: 3px solid; 
+    border-color: #0A3641;
+    margin-top: 30px;
 }
 
 .bn {
-    width: 80%;
-}
-
-.shop-image {
-    width: 70%;
-    margin: auto;
-    margin-top: 10px;   
+    font-size: 0.9em;
+    color: #0A3641; 
+    font-weight: bolder;
+    border: 2px solid #0A3641;    
+    border-radius: 10px 0;  
+    background-color: #fff;
+    width: 100px;
+    max-width: 50%;
+    height: 30px;
+    text-align: center;
+    margin: 10px auto 70px;
 }
 
 
@@ -1290,34 +1328,66 @@ h1 {
     
 /*Women & Men*/    
    
-.container1 {
+.productContainer, .productContainerMen {
+    display: block;
+    letter-spacing: 1.2em;
+    font-weight: bolder;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.productSection, .productSectionMen {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 95%;
+    grid-template-rows: auto 1fr auto auto;
+    text-align: center;
 }
 
-.shop {
+.productName {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bolder;
+    margin: auto;
+    padding-top: 10px;
+    justify-content: center;
+    border-top: 2px dashed #0A3641;
+}
+
+.price {
+    font-weight: bolder;
+    font-size: 1em;
+    text-align: center;
+    margin: auto auto 20px;
+}
+
+.productImage {
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
     width: 200px;
+    min-height: 200px;
+    margin: 30px auto 20px;
 }
 
-.shop p {
-    font-size: 18px;     
-    margin: 30px 20px 10px;
-}
-    
-.shop span {
-    float: right;
-    font-size: 18px;
+.line5 {
+    display: block;
+    border: 3px solid; 
+    border-color: #0A3641;
+    margin-top: 30px;
 }
 
 .bn {
-    width: 80%;
+    font-size: 0.9em;
+    color: #0A3641; 
+    font-weight: bolder;
+    border: 2px solid #0A3641;    
+    border-radius: 10px 0;  
+    background-color: #fff;
+    width: 100px;
+    max-width: 50%;
+    height: 30px;
+    text-align: center;
+    margin: 10px auto 70px;
 }
-    
-.shop-image {
-    width: 60%;
-    margin: auto;
-    margin-top: 15px;
+ 15px;
 }
 
     

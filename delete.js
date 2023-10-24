@@ -1,5 +1,5 @@
 
-const properties = ([
+/*const properties = ([
     flora = {
         "id": "jacketFlora",
         "title": "Flora",
@@ -120,3 +120,37 @@ const productPrice = document.getElementById("price");
 const divs = document.querySelectorAll("productselect > div");
 
 
+const url = "https://api.noroff.dev/api/v1/rainy-days";
+
+
+function productPage () {
+    window.location.href = "../product.html";
+}
+
+async function productPage () {
+  try {
+    const response = await fetch (url);
+    const product = await response.json();
+
+    console.log (product); 
+    productContent.innerHTML = "";
+    const jackets = product.results;
+   
+
+ jackets.forEach(function (jacket) {
+  
+
+       productContent.innerHTML += `<a href="product.html?id=${jackets.id}" class="productInfo">
+       <h1 class="name">${jackets.title}</h1> 
+       <div class="jacketImage" style="background-image: url(${jacket.image}></div>
+       <p class="productPrice">${jacket.price}</p> 
+       <p class="productDetail">${jacket.description}</p>
+       <p class="size">${jacket.sizes}</p>
+       </a>`;
+  });
+}    catch (error) {
+        console.log(error); 
+        productContent.innerHTML = message("Something went wrong", error);
+} }
+productPage();
+   */
