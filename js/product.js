@@ -1,48 +1,36 @@
-const productContent = document.querySelector(".productContent"); 
+const productSection = document.querySelector(".productSection");
+const url = "https://api.noroff.dev/api/v1/rainy-days";
 
-const params = new URLSearchParams (document.location.search);
-const id = params.get ("id");
-console.log (id);
+async function showProducts() {
 
-const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/" + id;
-console.log (apiUrl);
-
-
-
-async function showProductInfo () {
-    try {
-      const response = await fetch(apiUrl);
-      const jacket = await response.json();
-      
-    console.log(jacket);
-
-    createProductInfo (jacket);
-   
+    const response = await fetch(url);
+    const result = await response.json();
     
-  } catch(error) {
-    console.log (error);
-}}
+    let products = result ;
+    console.log(products);
+    productSection.innerHTML = "";
+    
 
+    for (let i = 0; i <products.length; i++) {
+        console.log(products[i]);
 
-function createProductInfo (jacket) {
-    productContent.innerHTML += `<a href="product.html?id=${jacket.id}" class="productInfo">
-                                    <h1 class="name">${jacket.title}</h1> 
-                                    <div class="productImage"style="background-image: url(${jacket.image})"></div>
-                                    <p class="productPrice">${jacket.price}</p> 
-                                    <p class="productDetail">${jacket.description}</p>
-                                    <p class="productPrice">${jacket.gender}</p> 
-                                    <p class="size">${jacket.sizes}</p>
-                                    <a href="product.html?id=${jacket.description}" class="productInfo"></a>
-                                  </a>`;
-         
- }
+        if (i === 12) {
+            break;
+        }
 
-showProductInfo (); 
-      
-  
+products.forEach(function (jacket){
+    
+productSection.innerHTML += ` <div class="jacketInfo">
+                                <div class="jacketContainer">
+                                <a href="product.html?id=${jacket.id}" class="productJacket>
+                                <div class="productname">${jacket.title}</div>
+                                <div class="productImage"style="background-image: url(${jacket.image})"></div>
+                                <p class="productPrice">${jacket.price + " " + "$"}</p><div>
+                                <div class="bnBox"><a href="product.html?id=${jacket.id}" id="bn"> Read More </a></div> 
+                                </a>
+                                </div>
+                             </div>`;
+    });
+    }}
 
-   
-
-
-
-
+showProducts ();
