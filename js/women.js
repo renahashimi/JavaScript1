@@ -1,3 +1,1 @@
-const productContainer = document.querySelector(".productContainer");
-productContainer.innerHTML += `<h1>WOMEN</h1>`;
-
+import { productWoman } from "./index.js";

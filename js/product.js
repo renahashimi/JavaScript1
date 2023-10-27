@@ -1,12 +1,11 @@
-const productSection = document.querySelector(".productSection");
-const url = "https://api.noroff.dev/api/v1/rainy-days";
+import { productSection } from "./index.js"
+import  { url }  from "./index.js"
 
 async function showProducts() {
 
     const response = await fetch(url);
-    const result = await response.json();
+    const products = await response.json();    
     
-    let products = result ;
     console.log(products);
     productSection.innerHTML = "";
     
@@ -14,9 +13,7 @@ async function showProducts() {
     for (let i = 0; i <products.length; i++) {
         console.log(products[i]);
 
-        if (i === 12) {
-            break;
-        }
+    
 
 products.forEach(function (jacket){
     

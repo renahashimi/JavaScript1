@@ -4,7 +4,6 @@ const params = new URLSearchParams (document.location.search);
 const id = params.get ("id");
 
 const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/" + id;
-console.log (apiUrl);
 
 
 
@@ -14,6 +13,7 @@ async function showProductInfo () {
       const jacket = await response.json();
 
       createProductInfo (jacket); 
+      selectSizes (jacket.sizes);
       
     
   } catch(error) {
@@ -22,7 +22,7 @@ async function showProductInfo () {
 
 
 function createProductInfo (jacket) {
-    productContent.innerHTML += `<a href="product.html?id=${jacket.id}" class="productInfo">
+    productContent.innerHTML += `
                                     <h1 class="productName">${jacket.title}</h1> 
                                     <div class="productImage2" style="background-image: url(${jacket.image})"></div>
                                     <p class="productPrice2">${jacket.price}</p> 
@@ -33,27 +33,25 @@ function createProductInfo (jacket) {
                                     <p class="productGender">Gender: ${jacket.gender}</p> 
                                     <p class="productColor">Color: ${jacket.baseColor}</p> 
                                     </div>
-                                    <div>
-                                    <button class="sizeButton">${jacket.sizes}</button>
+                                    <div> 
+                                    <p class="slcSize">SELECT SIZE</p>
+                                    <form class="sizeform">
+                                      <select class="sizeSelection" id="sizes">
+                                        <option value="sizeXS" id="selectsize2">${jacket.sizes[0]}</option>
+                                        <option value="sizeS" id="selectsize2">${jacket.sizes[1]}</option>
+                                        <option value="sizeM" id="selectsize2">${jacket.sizes[2]}</option>
+                                        <option value="sizeL" id="selectsize2">${jacket.sizes[3]}</option>
+                                        <option value="sizeXL" id="selectsize2">${jacket.sizes[4]}</option>
+                                      </select>
+                                    </form>
+                                    </div>
                                     <a href="cart.html" id="atc">ADD TO CART</a>
-                                  </div>`;  
-} 
+                                  `;  
+
+}
 showProductInfo (); 
    
 const backButton = document.querySelector(".backbutton");
 backButton.innerHTML = "  "+ "BACK TO JACKETS";
 
 
-const 
-  selectSize = document.querySelector (".sizeButton") ;         
-  let sizes = document.getElementById ("{jacket.sizes}");
-
-array.from(sizes).forEach(function (selectSize) {
- selectSize.addEventlistener("click", function () {
-
-  console.log (selectSize);
-  
-  console.log(sizes);
-
-  });
-});
