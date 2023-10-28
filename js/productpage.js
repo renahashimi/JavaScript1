@@ -32,7 +32,8 @@ function createProductInfo (jacket) {
                                     <p class="productColor">Color: ${jacket.baseColor}</p> 
                                     </div>
                                     <div><p class="productPrice2">${jacket.price}</p></div>
-                                    <div> 
+                                    <div class="selectbox">
+                                    <div class="formbox">
                                     <p class="slcSize">SELECT SIZE</p>
                                     <form class="sizeform">
                                       <select class="sizeSelection" id="sizes">
@@ -44,13 +45,36 @@ function createProductInfo (jacket) {
                                       </select>
                                     </form>
                                     </div>
-                                    <a href="cart.html" id="atc">ADD TO CART</a>
+                                    <div><a href="cart.html" id="atc">ADD TO CART</a></div>
+                                    </div>
+                                    
                                   `;  
+                                  
 
 }
 showProductInfo (); 
    
+
+
 const backButton = document.querySelector(".backbutton");
 backButton.innerHTML = "  "+ "BACK TO JACKETS";
 
 
+const load = document.querySelector(".loader");
+const loader = document.querySelector(".loader-indicator");
+
+
+setTimeout(function () {
+  load.innerHTML = "This is perfect choice!"
+}, 4000);
+
+
+setTimeout (function () {
+  loader.classList.remove("loader-indicator");
+}, 4000);
+
+
+
+
+
+console.log(loader, load);
