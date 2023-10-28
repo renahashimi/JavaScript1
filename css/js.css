@@ -170,7 +170,7 @@ select {
      color: var(--green);
  }
 
-.sizeform {
+.sizeform, #selectsize2 {
     width: 50%;
     text-align: center;
     margin: auto;
