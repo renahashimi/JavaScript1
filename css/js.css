@@ -156,39 +156,45 @@
      border-top: 2px double var(--green);
  }
  
- select {
+select {
      display: block;
-     width: 25%;
+     width: 60%;
      justify-content: center;
      margin: auto;
      text-align: center;
      font-size: 1em;
      color: var(--green);
-     border: 3px solid var(--green);
-     border-radius: 20px;
+     border: 2px solid var(--green);
+     border-radius: 10px;
      background-color: #fff;
      color: var(--green);
  }
+
+.sizeform {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
  
- #atc {
-     display: block;
-     border: 3px solid var(--green);
-     color: var(--green);
-     border-radius: 10px;
-     width: 160px;
-     height: auto;
-     font-size: 1em;
-     font-weight: bolder;
-     text-align: center;
-     padding: 10px;
-     margin: 25px auto 30px; 
- }
+#atc {
+    display: block;
+    border: 3px solid var(--green);
+    color: var(--green);
+    border-radius: 10px;
+    width: 160px;
+    height: auto;
+    font-size: 1em;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    margin: 25px auto 30px; 
+}
  
  .backbutton {
-     font-size: small;
-     margin: 10px 20px 20px 0;
-     text-decoration: underline;
- }
+    font-size: small;
+    margin: 10px 20px 20px 0;
+    text-decoration: underline;
+}
  
  
 @media only screen and (min-width: 570px) and (max-width: 749px) {
