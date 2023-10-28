@@ -20,19 +20,18 @@ async function showProductInfo () {
     console.log (error);
 }}
 
-
 function createProductInfo (jacket) {
     productContent.innerHTML += `
                                     <h1 class="productName">${jacket.title}</h1> 
                                     <div class="productImage2" style="background-image: url(${jacket.image})"></div>
-                                    <p class="productPrice2">${jacket.price}</p> 
                                     <div>
-                                    <div class="properties">PROPERTIES</div> 
+                                    <div class="properties">discription ${jacket.title}</div> 
                                     <p class="productDetail">${jacket.description}</p>
                                     <div class="infoBox">
                                     <p class="productGender">Gender: ${jacket.gender}</p> 
                                     <p class="productColor">Color: ${jacket.baseColor}</p> 
                                     </div>
+                                    <div><p class="productPrice2">${jacket.price}</p></div>
                                     <div> 
                                     <p class="slcSize">SELECT SIZE</p>
                                     <form class="sizeform">

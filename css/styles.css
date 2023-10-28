@@ -87,6 +87,7 @@ header {
     position: absolute;
     flex-direction: column;
     width: 100%;
+    margin-left: -20px;
     text-align: center;
     background-color: #fff;
     border-bottom: 4px solid #0A3641;
@@ -94,8 +95,9 @@ header {
 
 .nav2 a {
     font-size: 1.3em;
+    width: 100%;
     color: #0A3641; 
-    margin: 15px;
+    margin: 15px auto;
     height: auto;
     background-color: #fff;
 }
@@ -295,201 +297,6 @@ label {
     margin-left: 30px;
     margin-top: 10px;
     font-size: 0.8em;
-}
-
-
-/*Women & Men  NEW*/
-                                                        
-.jacketInfo {
-   display: block;
-   border:  1px solid var(--green);
-   margin: 20px auto;
-   padding: 20px auto;
-   width: 95%;
-   max-width: 220px;
-}
-
-.productMen, .productWoman {
-    display: flex;
-    letter-spacing: 1.4em;
-    font-weight: bolder;
-    text-align: center;
-    margin: 20px auto;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--green);
-    border-radius: 20px;
-}
-
-.productSection {
-    display: grid;
-    grid-template-columns: 48% 48%;
-    justify-content: center;
-    grid-template-rows: auto 1fr auto 30px;
-    text-align: center;
-    color: var(--green);
-    margin: auto;
-}
-
-.jacketContainer, .jacketContainer a {
-    font-size: 1.1em;
-    color: var(--green);
-    font-weight: 500;
-    margin: 5px auto;
-    width: 150px;
-}
-
-.productPrice {
-    font-weight: 700;
-    font-size: 1em;
-    text-align: center;
-    color: var(--green);
-}
-
-.productImage {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    min-width: 90%;
-    min-height: 150px;
-    margin: 30px auto 10px;
-}
-
-.line5 {
-    display: block;
-    border: 3px solid; 
-    border-color: #0A3641;
-    margin-top: 30px;
-}
-
-#bn {
-    font-size: 1em;
-    color: #0A3641; 
-    font-weight: bolder;
-    border: 2px solid #0A3641;    
-    border-radius: 10px 0;  
-    background-color: #fff;
-    width: 120px;
-    padding: 5px;
-    max-width: 50%;
-    height: 30px;
-    text-align: center;
-}
-
-.bnBox {
-    margin: 20px auto;
-}
-
-
-
-/*Product (PRODUCTPAGE) NEW*/
-
-.productContent {
-    display: block;
-}
-
-.productName {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 10px auto 30px;
-}
-
-.productImage2 {
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 200px;
-    min-height: 200px;
-    margin: 30px auto 20px;
-}
-
-.productInfo {
-    display: block;
-    font-size: 1em;
-    border-top: 2.5px dotted var(--green);
-    margin: 20px auto;
-    padding-top: 10px;
-    justify-content: center;
-}
-
-.productPrice2, .properties, .productDetail, .productGender, .sizeButton {
-    display: block;
-    text-align: center;
-    padding: 0 20px;
-    color: var(--green);
-    font-size: 1em;
-}
-
-.productPrice2  {
-    font-size: 1.7em;
-    font-weight: bolder;
-    padding-top: 20px;
-}
-
-.properties {
-    font-size: 1.1em;
-    letter-spacing: 0.2em;
-    margin-bottom: 20px;
-}
-
-.productGender, .productColor {
-    text-transform: uppercase;
-    margin-top: 40px;
-    color: var(--green);
-    margin: 5px auto;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.infoBox {
-    border: 1px solid var(--green);  
-    width: 200px;
-    margin: auto;
-}
-
-.sizeform, select {
-    display: block;
-    width: 50%;
-    margin: auto;
-    font-size: 1.1em;
-    text-align: center;
-    color: var(--green);
-
-}
-
-select {
-    border: 3px solid var(--green);
-    border-radius: 20px;
-}
-
-
-.slcSize {
-    display: block;
-    margin: 30px auto 10px;
-    padding-top: 10px;
-    text-align: center;
-    border-top: 2px double var(--green);
-}
-
-
-
-
-#atc {
-    display: block;
-    border: 3px solid var(--green);
-    color: var(--green);
-    border-radius: 10px;
-    width: 160px;
-    height: auto;
-    font-size: 1em;
-    font-weight: bolder;
-    text-align: center;
-    padding: 10px;
-    margin: 25px auto 30px; 
-}
-
-.backbutton {
-    font-size: small;
-    margin: 10px 20px;
-    text-decoration: underline;
 }
 
 
@@ -1107,40 +914,6 @@ header {
     margin-left: 30px;
 }
 
-  
-/*Women & Men NEW*/
-
-.jacketInfo {
-    width: 180px;
-    margin: 7px;
-}
-
-.jacketContainer, .jacketContainer a {
-
-    padding: 5px;
-}
-                                                       
-.productSection {
-    display: grid;
-    grid-template-columns: repeat(3,auto);
-}
-
- 
-/*Product (PRODUCTPAGE) NEW*/
-
-.productImage2 {
-    width: 250px;
-    min-height: 300px;
-}
-
-.productDetail {
-   width: 300px;
-   margin: 30px auto;
-}
-
-.properties {
-    font-size: 1.2em;
-}
 
 
 /*Contact*/
@@ -1322,46 +1095,6 @@ h1 {
     font-size: 1.5rem;
     margin-left: 45px;
 }
-
- 
-/*Women & Men NEW*/
-
-.jacketInfo {
-    width: 200px;
-    margin: 7px;
-}
-
-.productSection {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-}
-
-
-/*Product (PRODUCTPAGE) NEW*/
-
-.productContent {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 30px auto;
-}
-
-.productName {
-    font-size: 1.3em;
-}
-
-.productImage2 {
-    width: 250px;
-    min-height: 250px;
-}
-
-.productInfo {
-    width: 300px;
-}
-
-.infoBox {
-    margin-bottom: 100px;
-}
-
 
 
 /*Contact*/
