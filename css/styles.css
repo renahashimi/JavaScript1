@@ -1287,9 +1287,9 @@ header {
 }
     
 .headlogo {
-    min-width: 120px;
+    min-width: 100px;
     height: auto;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 .bag, .profile {

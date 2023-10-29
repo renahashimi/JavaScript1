@@ -1,10 +1,4 @@
-const productContent = document.querySelector(".productContent"); 
-
-const params = new URLSearchParams (document.location.search);
-const id = params.get ("id");
-
-const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/" + id;
-
+import { productContent, params, id, apiUrl } from "./index.js";
 
 
 async function showProductInfo () {
@@ -21,21 +15,21 @@ async function showProductInfo () {
 }}
 
 function createProductInfo (jacket) {
-    productContent.innerHTML += `
-                                    <h1 class="productName">${jacket.title}</h1> 
-                                    <div class="productImage2" style="background-image: url(${jacket.image})"></div>
-                                    <div>
-                                    <div class="properties">discription ${jacket.title}</div> 
+  setTimeout (function() {
+    productContent.innerHTML += ` <h1 class="productName">${jacket.title}</h1> 
+                                  <div class="productImage2" style="background-image: url(${jacket.image})"></div>
+                                  <div>
+                                    <div class="properties">description of ${jacket.title}</div> 
                                     <p class="productDetail">${jacket.description}</p>
                                     <div class="infoBox">
                                     <p class="productGender">Gender: ${jacket.gender}</p> 
                                     <p class="productColor">Color: ${jacket.baseColor}</p> 
-                                    </div>
-                                    <div><p class="productPrice2">${jacket.price}</p></div>
-                                    <div class="selectbox">
+                                  </div>
+                                  <div><p class="productPrice2">${jacket.price}</p></div>
+                                  <div class="selectbox">
                                     <div class="formbox">
-                                    <p class="slcSize">SELECT SIZE</p>
-                                    <form class="sizeform">
+                                      <p class="slcSize">SELECT SIZE</p>
+                                     <form class="sizeform">
                                       <select class="sizeSelection" id="sizes">
                                         <option value="sizeXS" id="selectsize2">${jacket.sizes[0]}</option>
                                         <option value="sizeS" id="selectsize2">${jacket.sizes[1]}</option>
@@ -46,12 +40,11 @@ function createProductInfo (jacket) {
                                     </form>
                                     </div>
                                     <div><a href="cart.html" id="atc">ADD TO CART</a></div>
-                                    </div>
-                                    
-                                  `;  
-                                  
+                                  </div>`;  
 
-}
+}, 2500);
+
+}                                 
 showProductInfo (); 
    
 
@@ -60,21 +53,3 @@ const backButton = document.querySelector(".backbutton");
 backButton.innerHTML = "  "+ "BACK TO JACKETS";
 
 
-const load = document.querySelector(".loader");
-const loader = document.querySelector(".loader-indicator");
-
-
-setTimeout(function () {
-  load.innerHTML = "This is perfect choice!"
-}, 4000);
-
-
-setTimeout (function () {
-  loader.classList.remove("loader-indicator");
-}, 4000);
-
-
-
-
-
-console.log(loader, load);

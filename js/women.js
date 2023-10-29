@@ -1,1 +1,0 @@
-import { productWoman } from "./index.js";

@@ -5,11 +5,9 @@ async function showProducts() {
 
     const response = await fetch(url);
     const products = await response.json();    
-    
-    console.log(products);
+
     productSection.innerHTML = "";
     
-
     for (let i = 0; i <products.length; i++) {
         console.log(products[i]);
 
@@ -27,5 +25,4 @@ products.forEach(function (jacket){
     });
     }
 }
-
 showProducts ();
