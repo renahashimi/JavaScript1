@@ -41,6 +41,7 @@
     border:  1px solid var(--green);
     margin: 10px auto;
     width: 98%;
+
     max-width: 220px;
 }
  
@@ -99,14 +100,14 @@
 }
  
 #bn {
-    font-size: 1em;
+    font-size: 0.7em;
     color: #0A3641; 
     font-weight: bolder;
     border: 2px solid #0A3641;    
-    border-radius: 10px 0;  
+    border-radius: 7px;  
     background-color: #fff;
     width: 120px;
-    padding: 5px;
+    padding: 4px 5px;
     max-width: 50%;
     height: 30px;
     text-align: center;
@@ -149,20 +150,30 @@
  
 .productPrice2, .properties, .productDetail, .productGender, .sizeButton {
     display: block;
+    max-width: 300px;
     text-align: center;
+    margin: auto;
     padding: 10px 20px;
     color: var(--green);
     font-size: 1em;
 }
  
 .productPrice2  {
-    font-size: 1.7em;
+    font-size: 1.2em;
     font-weight: bolder;
     padding-top: 20px;
 }
+
+.onSaleSection, .onSaleSection2  {
+    display: block;
+    color: red;
+    font-weight: bolder;
+    font-size: 1.2em;
+    text-align: center;
+}
  
 .properties {
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: 600;
     text-transform: uppercase;    
     letter-spacing: 0.2em;

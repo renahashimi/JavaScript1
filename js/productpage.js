@@ -1,23 +1,22 @@
-import { productContent, params, id, apiUrl } from "./index.js";
+import { productContent, apiUrl } from "./index.js";
 
 
-async function showProductInfo () {
+export async function showProductInfo () {
     try {
       const response = await fetch(apiUrl);
       const jacket = await response.json();
 
-      createProductInfo (jacket); 
-      selectSizes (jacket.sizes);
-      
-    
-  } catch(error) {
-    console.log (error);
-}}
+      createProductInfo (jacket);
+     
+} catch(error) {
+  console.log (error);
+}
+}
 
 function createProductInfo (jacket) {
   setTimeout (function() {
     productContent.innerHTML += ` <h1 class="productName">${jacket.title}</h1> 
-                                  <div class="productImage2" style="background-image: url(${jacket.image})"></div>
+                                  <div class="productImage2" style="background-image: url(${jacket.image})" alt"${jacket.title}"></div>
                                   <div>
                                     <div class="properties">description of ${jacket.title}</div> 
                                     <p class="productDetail">${jacket.description}</p>
@@ -25,7 +24,10 @@ function createProductInfo (jacket) {
                                     <p class="productGender">Gender: ${jacket.gender}</p> 
                                     <p class="productColor">Color: ${jacket.baseColor}</p> 
                                   </div>
-                                  <div><p class="productPrice2">${jacket.price}</p></div>
+                                  <div>
+                                    <div><p class="productPrice2">${jacket.price + " " + "$"}</p></div>
+                                    <div class="onSaleSection"><p id="onSaleSection2">${jacket.discountedPrice + " " + "$"}</p></div>
+                                  </div>
                                   <div class="selectbox">
                                     <div class="formbox">
                                       <p class="slcSize">SELECT SIZE</p>
@@ -39,12 +41,24 @@ function createProductInfo (jacket) {
                                       </select>
                                     </form>
                                     </div>
-                                    <div><a href="cart.html" id="atc">ADD TO CART</a></div>
-                                  </div>`;  
+                                    <div><a href="cart.html?id=${jacket.id}" id="atc">ADD TO CART</a></div>
+                                  </div>`;
+
+let priceText = document.querySelector(".productPrice2");
+let onSaleText = document.querySelector("#onSaleSection2");
+
+if (jacket.onSale) {
+    priceText.innerHTML = "<strike>" + "(" + priceText.innerHTML + ")" + "</strike>";
+    priceText.style.fontSize = "0.8em"
+  } else {
+    onSaleText.style.display = "none";
+  }
+
 
 }, 2500);
 
-}                                 
+
+}                                
 showProductInfo (); 
    
 
