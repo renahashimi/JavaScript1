@@ -8,23 +8,24 @@
 /*Loader*/
 
 .loadingbox {
-    display: flex;
-    margin: 30px auto 20px;
+    display: block;
+    
 }
 
 .loader {
     font-size: 1.4em;
-    margin-top: 10px;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .loader-indicator {
-    border: 6px solid #80acb8;
-    border-top: 6px solid var(--green) ;
+    border: 6px solid var(--green);
+    border-top: 6px solid #9d9e9f;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     animation: spin 1.5s linear infinite;
-    margin-left: 10px;
+    margin: 50px auto;
 }
 
 
@@ -33,15 +34,27 @@
    100% { transform: rotate(360deg);}
 }
 
+/*Error*/
+
+.errorMessage {
+    display: block;
+    width: max-content;
+    font-size: 1.2em;
+    color: red;
+    border: 1px solid var(--green);
+    padding: 1.5rem;
+    margin: 30px auto;
+    grid-column-end: span 3;
+}
+
 
 /*Women & Men*/
                                                         
 .jacketInfo {
-    display: block;
+    display: inline-block;
     border:  1px solid var(--green);
     margin: 10px auto;
     width: 98%;
-
     max-width: 220px;
 }
  
@@ -60,7 +73,6 @@
     display: grid;
     grid-template-columns: 49% 49%;
     justify-content: center;
-    grid-template-rows: auto 1fr auto 30px;
     text-align: center;
     color: var(--green);
     margin: auto;
@@ -128,7 +140,7 @@
  
 .productName {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 20px auto 30px;
+    margin: 20px auto 0;
 }
  
 .productImage2 {
@@ -136,7 +148,7 @@
     background-size: contain;
     width: 250px;
     min-height: 250px;
-    margin: 30px auto 20px;
+    margin: 20px auto 20px;
 }
  
 .productInfo {
@@ -164,6 +176,14 @@
     padding-top: 20px;
 }
 
+.saleText {
+    display: block;
+    margin: 30px auto -10px;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 1px dotted var(--green);   
+}
+
 .onSaleSection, .onSaleSection2  {
     display: block;
     color: red;
@@ -173,6 +193,7 @@
 }
  
 .properties {
+    width: 230px;
     font-size: 0.7em;
     font-weight: 600;
     text-transform: uppercase;    
@@ -321,7 +342,7 @@ select {
 
 .productContent {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: repeat(3, auto);
     margin: 20px auto;
     border: none;
     border-top: 2px double var(--green);
@@ -329,8 +350,11 @@ select {
 
 .productName {
     font-size: 1.6em;
-    margin: auto;
-    writing-mode: vertical-rl;
+    margin: 30px auto;
+}
+
+#productName {
+     grid-column-end: span 3;
 }
 
 .productImage2 {
@@ -348,7 +372,7 @@ select {
 }
 
 .properties {
-    margin: 30px auto 0;
+    margin: 0 auto 0;
 }
 }
 
@@ -373,7 +397,7 @@ select {
 
 .productContent {
     display: grid;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: 500px 1fr;
     margin: 40px ;
     border: none;
 }
@@ -385,8 +409,12 @@ select {
     grid-column-end: span 3;
 }
 
+#productName {
+     grid-column-end: span 3;
+}
+
 .productInfo {
-    width: 350px;
+    min-width: 350px;
 }
 
 .infoBox {
@@ -394,8 +422,8 @@ select {
 }
 
 .productImage2 {
-    width: 400px;
-    min-height: 400px;
+    width: 350px;
+    min-height: 350px;
     margin-top: 80px;  
 }
 
@@ -413,6 +441,7 @@ select {
     font-size: 1.1em;
     margin-top: 30px;  
     font-weight: 500;
+    width: 400px;
 }
 
 .productGender, .productColor {
