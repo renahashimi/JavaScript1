@@ -1,7 +1,12 @@
-import { productContent, apiUrl, errorMessage } from "./script.js";
+import { errorMessage } from "./errormessage.js";
 
-async function showProductInfo () {
-    try {
+const productContent = document.querySelector(".productContent");
+const params = new URLSearchParams (document.location.search);
+const id = params.get ("id");
+const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/" + id;
+
+async function getProductInfo () {
+  try {
       const response = await fetch(apiUrl);
       const jacket = await response.json();
 
@@ -10,15 +15,14 @@ async function showProductInfo () {
      
 } catch(error) {
   console.log("Unknown error", error);
-  productContent.innerHTML = errorMessage(message);
+  productContent.innerHTML = errorMessage();
 }
 }
 
 //API call for each jacket
 function createProductInfo (jacket) {
   setTimeout (function() {
-    productContent.innerHTML += `
-                                    <div id="productName"><h1 class="productName">${jacket.title}<h1></div>
+    productContent.innerHTML += `<div id="productName"><h1  class="productName">${jacket.title}<h1></div>
                                     <div class="productImage2" style="background-image: url(${jacket.image})" alt"${jacket.title}"></div>
                                   <div>
                                     <div class="properties">description of ${jacket.title}</div> 
@@ -29,7 +33,7 @@ function createProductInfo (jacket) {
                                   </div>
                                   <div>
                                     <div><p class="saleText">Lucky you, this jacket is actually on sale &#129321</p></div>
-                                    <div><p class="productPrice2">${jacket.price + " " + "$"}</p></div>
+                                    <div><p class="productPrice2">${"$" + jacket.price}</p></div>
                                     <div class="onSaleSection">
                                     <p id="onSaleSection2">${jacket.discountedPrice + " " + "$"}</p></div>
                                   </div>
@@ -46,8 +50,11 @@ function createProductInfo (jacket) {
                                       </select>
                                     </form>
                                     </div>
-                                    <div><a href="cart.html?id=${jacket.id}" id="atc">ADD TO CART</a></div>
+                                    <div>
+                                      <a href="cart.html?id=${jacket.id}" id="atc">ADD TO CART</a>
+                                    </div>
                                   </div>`;
+
 
 let priceText = document.querySelector(".productPrice2");
 let onSaleText = document.querySelector("#onSaleSection2");
@@ -62,11 +69,25 @@ if (jacket.onSale) {
   }
 
 }, 2500);
-}                                
-showProductInfo (); 
-   
-//Go back to jacket button on product.html page
+
+
+//Go back button - for jackets on product.html
 const backButton = document.querySelector(".backbutton");
 backButton.innerHTML = "  "+ "BACK TO JACKETS";
 
+//Loader only for "Productpage" / "product.html"
+const load = document.querySelector(".loader");
+const loader = document.querySelector(".loader-indicator");
+load.innerHTML = "Your jacket is loading...";
 
+setTimeout (function () {
+  loader.classList.remove("loader-indicator")
+}, 3000);
+
+setTimeout(function () {
+  load.innerHTML = "Is this your new jacket?" + " " + "&#128525"
+}, 3000);
+
+
+} 
+getProductInfo()

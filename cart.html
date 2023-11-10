@@ -7,6 +7,9 @@
   <meta name="description" content="Rainydays - Cart"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/product.js"></script>
+  <script type="module" src="js/cart.js"></script>
   <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>   
   <title>CART</title>
 </head>
@@ -36,15 +39,14 @@
     </nav>
   </div>
   </header>
-  <main>
-    <div class="line1"></div>
+  <main>    
+    <input type="button" id="back" value="back" onclick="history.go(-1);"> 
+    <label for="back" class="backbutton"></label>
+   <div class="line1"></div>
     <h1>JUST ONE STEP AWAY</h1>
     <div class="content4">
       <div class="box3">
         <h2 class="os">order summary</h2>
-
-        <div class="cartContent"></div>
-
         <div class=container5><img class="ch-img" src="images/Jacket/flora.jpg" alt="image-checkout">
           <div>
             <div class="ch-text1">

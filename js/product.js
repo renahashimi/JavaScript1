@@ -1,12 +1,16 @@
-import { productSection, url, errorMessage } from "./script.js";
+import { errorMessage } from "./errormessage.js";
 
-export async function showProducts() {
-   try{
+const url = "https://api.noroff.dev/api/v1/rainy-days/";
+const productSection = document.querySelector(".productSection");
+
+async function getProducts() {
+  try {
     const response = await fetch(url);
-    const products = await response.json();    
+    const products = await response.json(); 
+    //console.log(products);
+    productSection.innerHTML = "";
 
     for (let i = 0; i <products.length; i++) {
-       //console.log(products[i]);
        //(i === 2) - to show more products on page.
      if (i === 2) {
         break;
@@ -19,18 +23,17 @@ products.forEach(function (jacket){
                                     <a href="product.html?id=${jacket.id}" class="productJacket>
                                     <div class="productname">${jacket.title}</div>
                                     <div class="productImage"style="background-image: url(${jacket.image})" alt"${jacket.title}"></div>
-                                    <p class="productPrice">${jacket.price + " " + "$"}</p><div>
-                                    <div class="bnBox"><a href="product.html?id=${jacket.id}" id="bn"> Read More </a></div> 
+                                    <p class="productPrice">${"$" + jacket.price}</p><div>
+                                    <div class="bnBox"><a href="product.html?id=${jacket.id}" id="bn">READ MORE</a></div> 
                                     </a>
                                   </div>
                                 </div>`;
-                         
-}); 
-}
-} catch(error) {
+                     
+});
+}} catch(error) {
     console.log("Unknown error", error);
     productSection.innerHTML = errorMessage();
-} 
 }
-showProducts ();
+}
 
+getProducts();
