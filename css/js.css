@@ -198,6 +198,7 @@
 }
  
 .productGender, .productColor {
+    font-size: 0.8em;
     margin-top: 40px;
     color: var(--green);
     margin: 5px auto;
@@ -424,8 +425,8 @@ select {
 }
 
 .productImage2 {
-    width: 350px;
-    min-height: 350px;
+    max-width: 300px;
+    min-height: 300px;
     margin-top: 80px;  
 }
 
@@ -440,14 +441,14 @@ select {
 }
 
 .properties {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-top: 30px;  
     font-weight: 500;
-    width: 400px;
+    max-width: 400px;
 }
 
 .productGender, .productColor {
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .backbutton {
