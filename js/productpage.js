@@ -32,7 +32,7 @@ function createProductInfo (jacket) {
                                     <p class="productColor">Color: ${jacket.baseColor}</p> 
                                   </div>
                                   <div>
-                                    <div><p class="saleText">Lucky you, this jacket is actually on sale &#129321</p></div>
+                                    <div><p class="saleText"></p></div>
                                     <div><p class="productPrice2">${"$" + jacket.price}</p></div>
                                     <div class="onSaleSection">
                                     <p id="onSaleSection2">${jacket.discountedPrice + " " + "$"}</p></div>
@@ -55,7 +55,7 @@ function createProductInfo (jacket) {
                                     </div>
                                   </div>`;
 
-
+//Is the jacket on sale ?
 let priceText = document.querySelector(".productPrice2");
 let onSaleText = document.querySelector("#onSaleSection2");
 let saleText = document.querySelector(".saleText");
@@ -63,6 +63,7 @@ let saleText = document.querySelector(".saleText");
 if (jacket.onSale) {
     priceText.innerHTML = "<strike>" + "(" + priceText.innerHTML + ")" + "</strike>";
     priceText.style.fontSize = "0.8em"
+    saleText.innerHTML = "Lucky you, this jacket is actually on sale &#129321"
   } else {
     onSaleText.style.display = "none";
     saleText.style.display = "none";
