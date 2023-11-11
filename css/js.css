@@ -423,15 +423,14 @@ select {
 .productContent {
     display: grid;
     grid-template-columns: 400px 1fr;
-    margin: 20px 80px;
-    padding-top: 20px;
+    margin: 0 80px;
     border: none;
     border-top: 3px double var(--green);
 }
 
 .productName {
     font-size: 1.3em;
-    margin: auto;
+    margin: 20px auto 0;
     writing-mode:unset;
     grid-column-end: span 3;
 }
