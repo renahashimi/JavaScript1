@@ -25,7 +25,7 @@ function createProductInfo (jacket) {
     productContent.innerHTML += `<div id="productName"><h1  class="productName">${jacket.title}<h1></div>
                                     <div class="productImage2" style="background-image: url(${jacket.image})" alt"${jacket.title}"></div>
                                   <div>
-                                    <div class="properties">description of ${jacket.title}</div> 
+                                    <div class="properties">description of <span><br>${jacket.title}</br></span></div> 
                                     <p class="productDetail">${jacket.description}</p>
                                     <div class="infoBox">
                                     <p class="productGender">Gender: ${jacket.gender}</p> 
