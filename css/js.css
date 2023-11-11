@@ -355,7 +355,7 @@ select {
 .productContent {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    margin: 20px auto;
+    margin: 10px auto;
     border: none;
     border-top: 2px double var(--green);
 }
@@ -423,7 +423,7 @@ select {
 .productContent {
     display: grid;
     grid-template-columns: 400px 1fr;
-    margin: 40px 80px;
+    margin: 20px 80px;
     padding-top: 20px;
     border: none;
     border-top: 3px double var(--green);
