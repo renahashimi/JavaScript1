@@ -16,8 +16,8 @@
     border-top: 3px solid var(--green);
     color: #9f1694;
     font-size: 1.2em;
-    margin: 20px auto;
-    padding-top: 20px;
+    margin: 10px auto;
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -28,7 +28,7 @@
     width: 30px;
     height: 30px;
     animation: spin 1.5s linear infinite;
-    margin: 50px auto;
+    margin: 20px auto;
 }
 
 
