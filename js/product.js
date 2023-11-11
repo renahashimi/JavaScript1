@@ -7,7 +7,7 @@ async function getProducts() {
   try {
     const response = await fetch(url);
     const products = await response.json(); 
-    //console.log(products);
+
     productSection.innerHTML = "";
 
     for (let i = 0; i <products.length; i++) {
