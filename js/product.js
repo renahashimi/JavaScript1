@@ -1,7 +1,8 @@
 import { errorMessage } from "./errormessage.js";
 
 const url = "https://api.noroff.dev/api/v1/rainy-days/";
-const productSection = document.querySelector(".productSection");
+const productSection = document.querySelector(".productSection");  
+
 
 async function getProducts() {
   try {
@@ -34,6 +35,12 @@ products.forEach(function (jacket){
     console.log("Unknown error", error);
     productSection.innerHTML = errorMessage();
 }
+// Coded H1-title for women.html page, but couldn´t change it for men.html, without one of them disappearing :/
+document.querySelector(".productWoman").innerHTML = "WOMAN"; 
+//document.querySelector(".productMen").innerHTML = "MEN"; 
 }
 
 getProducts();
+
+
+
