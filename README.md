@@ -1,7 +1,8 @@
 # JS1
 
-- New CSS for JS1.CA: js.css
+# CHANGES I DID FOR THIS CA
 
+- New CSS for JS1.CA: js.css
 - Products page: product.html
 - Product details page: men.html / women.html
 
