@@ -1,6 +1,6 @@
 # JS1
 
-# CHANGES I DID FOR THIS CA
+# Changes I did for this CA
 
 - New CSS for JS1.CA: js.css
 - Products page: product.html
